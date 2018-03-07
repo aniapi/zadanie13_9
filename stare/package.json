@@ -1,10 +1,10 @@
 {
   "name": "8_3",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "test": "npm run test:html",
     "test:html": "glob-run nu-html-checker *.html",
     "test:js": "glob-run jshint js/*.js",
     "init-project": "npm run init:dirs && npm run init:files && npm run init:gitignore && npm run init:npm-install",
@@ -17,8 +17,7 @@
     "build:sass:dev": "node-sass --output-style expanded --source-map true -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
     "watch:sass": "node-sass --output-style expanded --source-map true -o css sass --watch",
-    "watch:autoprefixer": "onchange -d 100 css/style.css -- autoprefixer-cli -o css/style.prefixed.css css/style.css",
-    "start": "nodemon index.js"
+    "watch:autoprefixer": "onchange -d 100 css/style.css -- autoprefixer-cli -o css/style.prefixed.css css/style.css"
   },
   "keywords": [],
   "author": "",
@@ -27,16 +26,15 @@
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.21.0",
     "colors": "^1.1.2",
-    "formidable": "^1.1.1",
     "fs": "0.0.1-security",
     "glob-run": "^0.1.6",
-    "http": "0.0.0",
     "jshint": "^2.9.5",
     "node-sass": "^4.7.2",
     "nu-html-checker": "^0.1.0",
     "onchange": "^3.3.0",
     "parallelshell": "^3.0.2",
-    "start": "^5.1.0",
-    "stat-mode": "^0.2.2"
-  }
+    "start": "^5.1.0"
+  },
+  "devDependencies": {},
+  "description": ""
 }
